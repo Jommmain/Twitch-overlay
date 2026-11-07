@@ -1,0 +1,85 @@
+{
+  "scene": {
+    "width": 1920,
+    "height": 1080,
+    "stripHeight": 250,
+    "stripOpacity": 1,
+    "murlocSize": 148,
+    "minMurlocs": 10,
+    "maxMurlocs": 40,
+    "viewersPerMurloc": 2,
+    "showNicknames": true
+  },
+  "animation": {
+    "wanderSpeed": 32,
+    "panicSpeed": 250,
+    "idleBob": 2,
+    "hopHeight": 23,
+    "speechIntervalSec": 18,
+    "blinkIntervalSec": 5,
+    "splash": true,
+    "reducedMotion": false,
+    "fog": true
+  },
+  "triggers": {
+    "viewerStep": 5,
+    "uptimeMinutes": 30,
+    "watchMinutes": 30,
+    "timeMode": "both",
+    "fireExistingMilestones": false,
+    "presenceTtlSeconds": 600,
+    "maxPresenceUsers": 10000
+  },
+  "event": {
+    "cooldownSeconds": 12,
+    "crowdSize": 18,
+    "runSeconds": 7,
+    "staggerSeconds": 0.065,
+    "soldierSize": 174,
+    "direction": "alternate",
+    "maxQueuedEvents": 12,
+    "queueMaxAgeSeconds": 180,
+    "dust": true
+  },
+  "twitch": {
+    "enabled": false,
+    "channel": "YOUR_CHANNEL_LOGIN",
+    "pollSeconds": 60,
+    "staleAfterSeconds": 150,
+    "clientIdEnv": "TWITCH_CLIENT_ID",
+    "accessTokenEnv": "TWITCH_ACCESS_TOKEN",
+    "ircEnabled": false,
+    "ircNickEnv": "TWITCH_IRC_NICK",
+    "ircTokenEnv": "TWITCH_IRC_TOKEN"
+  },
+  "demo": {
+    "viewers": 20,
+    "uptimeSeconds": 0,
+    "timeScale": 1
+  },
+  "state": {
+    "persistMilestones": true,
+    "storageKey": "swamp-overlay-v1"
+  },
+  "artVersion": "1.2.1",
+  "nicknames": {
+    "enabled": true,
+    "maxOnScreen": 20,
+    "inactivitySeconds": 900,
+    "fadeSeconds": 1.2,
+    "ignoredBots": [
+      "nightbot",
+      "streamelements",
+      "streamlabs",
+      "moobot",
+      "fossabot",
+      "wizebot",
+      "botrix",
+      "soundalerts",
+      "sery_bot"
+    ],
+    "bubblesEnabled": true,
+    "bubbleDurationSeconds": 5,
+    "bubbleMaxLength": 140
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "frameCount": 8,
+  "fps": 12,
+  "cellSize": [
+    512,
+    512
+  ],
+  "anchor": [
+    256,
+    493
+  ],
+  "frames": [
+    "assets/soldiers/run-00.png",
+    "assets/soldiers/run-01.png",
+    "assets/soldiers/run-02.png",
+    "assets/soldiers/run-03.png",
+    "assets/soldiers/run-04.png",
+    "assets/soldiers/run-05.png",
+    "assets/soldiers/run-06.png",
+    "assets/soldiers/run-07.png"
+  ],
+  "source": "painted 4x2 sheet generated from approved footman",
+  "uniqueFrames": 8
+}

@@ -1,0 +1,143 @@
+name: Build and publish approved tagged release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        # macos-14 was retired on 2026-11-02. macos-15 is an arm64 runner.
+        os: [windows-latest, macos-15]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - name: Validate tag against package version
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const pkg = require('./desktop/package.json');
+          const tag = process.env.GITHUB_REF_NAME;
+          if (tag !== 'v' + pkg.version) {
+            console.error(`tag ${tag} does not match desktop/package.json version v${pkg.version}`);
+            process.exit(1);
+          }
+          const publish = pkg.build && pkg.build.publish && pkg.build.publish[0];
+          if (!publish || publish.provider !== 'github' || publish.owner !== 'Jommmain' || publish.repo !== 'Twitch-overlay' || publish.private !== false) {
+            console.error('electron-updater publish config must be the public GitHub repo Jommmain/Twitch-overlay');
+            process.exit(1);
+          }
+          if (Object.prototype.hasOwnProperty.call(publish, 'token')) {
+            console.error('publish config must not embed a token');
+            process.exit(1);
+          }
+          const feed = fs.readFileSync('./desktop/app-update.yml', 'utf8');
+          if (!feed.includes('provider: github') || !feed.includes('owner: Jommmain') || !feed.includes('repo: Twitch-overlay') || !feed.includes('private: false')) {
+            console.error('desktop/app-update.yml must point at public Jommmain/Twitch-overlay');
+            process.exit(1);
+          }
+          if (/token:|password:|authorization:/i.test(feed)) {
+            console.error('desktop/app-update.yml contains credentials');
+            process.exit(1);
+          }
+          NODE
+      - run: npm ci
+        working-directory: desktop
+      - run: npm test
+        working-directory: desktop
+      - name: Test overlay
+        shell: bash
+        run: node --test overlay/tests/*.test.mjs
+      - run: npm run stage
+        working-directory: desktop
+      - name: Windows installer and portable
+        if: runner.os == 'Windows'
+        # --publish never still writes dist/latest.yml for the NSIS target and does not open a release.
+        run: npm exec -- electron-builder --win nsis portable --x64 --publish never
+        working-directory: desktop
+      - name: macOS arm64 ZIP (unsigned; manual-update mode)
+        if: runner.os == 'macOS'
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        # --publish never still writes dist/latest-mac.yml and does not sign or notarize.
+        run: npm exec -- electron-builder --mac zip --arm64 --publish never
+        working-directory: desktop
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ runner.os }}
+          if-no-files-found: error
+          path: |
+            dist/*.exe
+            dist/*.zip
+            dist/*.blockmap
+            dist/latest*.yml
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+          merge-multiple: true
+      - name: Publish complete release only after native builds succeed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const dir = 'release-assets';
+          const names = new Set(fs.readdirSync(dir));
+          function field(file, key) {
+            const text = fs.readFileSync(path.join(dir, file), 'utf8');
+            const line = text.split(/\r?\n/).find((entry) => entry.startsWith(key + ':'));
+            if (!line) throw new Error(`${file} is missing ${key}`);
+            return line.slice(key.length + 1).trim().replace(/^['"]|['"]$/g, '');
+          }
+          function assertAsset(file) {
+            if (!names.has(file)) throw new Error(`missing ${file}`);
+            const body = fs.readFileSync(path.join(dir, file), 'utf8');
+            if (/token:|password:|authorization:/i.test(body)) throw new Error(`${file} contains credentials`);
+            const version = field(file, 'version');
+            const expected = process.env.GITHUB_REF_NAME.slice(1);
+            if (version !== expected) throw new Error(`${file} version ${version} does not match ${expected}`);
+            const target = field(file, 'path');
+            if (!target || target.includes('..') || target.includes('/') || target.includes('\\') || target.includes('://')) {
+              throw new Error(`${file} path is not a release filename: ${target}`);
+            }
+            if (!names.has(target)) throw new Error(`${file} path ${target} was not built`);
+            if (!/^sha512:\s+\S+/m.test(body)) throw new Error(`${file} is missing sha512`);
+            return target;
+          }
+          const setup = assertAsset('latest.yml');
+          if (!setup.endsWith('-Setup.exe')) throw new Error(`latest.yml must point at the NSIS Setup.exe, got ${setup}`);
+          const mac = assertAsset('latest-mac.yml');
+          if (!mac.endsWith('.zip') || !mac.includes('arm64')) throw new Error(`latest-mac.yml must point at the arm64 zip, got ${mac}`);
+          if (![...names].some((name) => name.includes('Portable') && name.endsWith('.exe'))) throw new Error('missing Windows portable exe');
+          console.log(`release assets ok: ${setup}; ${mac}`);
+          NODE
+          tag="$GITHUB_REF_NAME"
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" --verify-tag --draft --title "Swamp Murlocs ${tag#v}" --notes-file RELEASE-NOTES-ru.md
+          fi
+          shopt -s nullglob
+          files=(release-assets/*.exe release-assets/*.zip release-assets/*.blockmap release-assets/latest*.yml)
+          if ((${#files[@]} == 0)); then
+            echo "no release files" >&2
+            exit 1
+          fi
+          gh release upload "$tag" "${files[@]}" --clobber
+          gh release edit "$tag" --draft=false --latest
