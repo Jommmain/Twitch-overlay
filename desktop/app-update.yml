@@ -1,0 +1,5 @@
+provider: github
+owner: Jommmain
+repo: Twitch-overlay
+private: false
+updaterCacheDirName: swamp-murlocs-desktop-updater

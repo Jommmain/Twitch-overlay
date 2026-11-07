@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "fisher",
+    "name": "Рыбак",
+    "displayScale": 1.0,
+    "plannedAction": "net-lift",
+    "eyes": [
+      [
+        181.5,
+        126.5,
+        11.5,
+        21.5
+      ],
+      [
+        276.0,
+        131.5,
+        23.5,
+        25.5
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/fisher/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/fisher/emerald/body.png",
+          "action": "assets/rigs/fisher/emerald/action.png",
+          "fin": "assets/rigs/fisher/emerald/fin.png",
+          "lids": "assets/rigs/fisher/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/fisher/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/fisher/lagoon/body.png",
+          "action": "assets/rigs/fisher/lagoon/action.png",
+          "fin": "assets/rigs/fisher/lagoon/fin.png",
+          "lids": "assets/rigs/fisher/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/fisher/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/fisher/ice/body.png",
+          "action": "assets/rigs/fisher/ice/action.png",
+          "fin": "assets/rigs/fisher/ice/fin.png",
+          "lids": "assets/rigs/fisher/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/fisher/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/fisher/sapphire/body.png",
+          "action": "assets/rigs/fisher/sapphire/action.png",
+          "fin": "assets/rigs/fisher/sapphire/fin.png",
+          "lids": "assets/rigs/fisher/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/fisher/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/fisher/amethyst/body.png",
+          "action": "assets/rigs/fisher/amethyst/action.png",
+          "fin": "assets/rigs/fisher/amethyst/fin.png",
+          "lids": "assets/rigs/fisher/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/fisher/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/fisher/orchid/body.png",
+          "action": "assets/rigs/fisher/orchid/action.png",
+          "fin": "assets/rigs/fisher/orchid/fin.png",
+          "lids": "assets/rigs/fisher/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/fisher/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/fisher/coral/body.png",
+          "action": "assets/rigs/fisher/coral/action.png",
+          "fin": "assets/rigs/fisher/coral/fin.png",
+          "lids": "assets/rigs/fisher/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/fisher/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/fisher/mandarin/body.png",
+          "action": "assets/rigs/fisher/mandarin/action.png",
+          "fin": "assets/rigs/fisher/mandarin/fin.png",
+          "lids": "assets/rigs/fisher/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/fisher/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/fisher/gold/body.png",
+          "action": "assets/rigs/fisher/gold/action.png",
+          "fin": "assets/rigs/fisher/gold/fin.png",
+          "lids": "assets/rigs/fisher/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/fisher/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/fisher/moss/body.png",
+          "action": "assets/rigs/fisher/moss/action.png",
+          "fin": "assets/rigs/fisher/moss/fin.png",
+          "lids": "assets/rigs/fisher/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        185.0,
+        240.0
+      ],
+      "finPivot": [
+        277.5,
+        102.0
+      ],
+      "action": "net-lift",
+      "angle": -0.1,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "shaman",
+    "name": "Шаман",
+    "displayScale": 1.0,
+    "plannedAction": "totem-sway",
+    "eyes": [
+      [
+        212.5,
+        164.0,
+        11.0,
+        21.0
+      ],
+      [
+        303.0,
+        164.0,
+        21.5,
+        23.0
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/shaman/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/shaman/emerald/body.png",
+          "action": "assets/rigs/shaman/emerald/action.png",
+          "fin": "assets/rigs/shaman/emerald/fin.png",
+          "lids": "assets/rigs/shaman/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/shaman/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/shaman/lagoon/body.png",
+          "action": "assets/rigs/shaman/lagoon/action.png",
+          "fin": "assets/rigs/shaman/lagoon/fin.png",
+          "lids": "assets/rigs/shaman/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/shaman/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/shaman/ice/body.png",
+          "action": "assets/rigs/shaman/ice/action.png",
+          "fin": "assets/rigs/shaman/ice/fin.png",
+          "lids": "assets/rigs/shaman/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/shaman/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/shaman/sapphire/body.png",
+          "action": "assets/rigs/shaman/sapphire/action.png",
+          "fin": "assets/rigs/shaman/sapphire/fin.png",
+          "lids": "assets/rigs/shaman/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/shaman/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/shaman/amethyst/body.png",
+          "action": "assets/rigs/shaman/amethyst/action.png",
+          "fin": "assets/rigs/shaman/amethyst/fin.png",
+          "lids": "assets/rigs/shaman/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/shaman/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/shaman/orchid/body.png",
+          "action": "assets/rigs/shaman/orchid/action.png",
+          "fin": "assets/rigs/shaman/orchid/fin.png",
+          "lids": "assets/rigs/shaman/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/shaman/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/shaman/coral/body.png",
+          "action": "assets/rigs/shaman/coral/action.png",
+          "fin": "assets/rigs/shaman/coral/fin.png",
+          "lids": "assets/rigs/shaman/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/shaman/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/shaman/mandarin/body.png",
+          "action": "assets/rigs/shaman/mandarin/action.png",
+          "fin": "assets/rigs/shaman/mandarin/fin.png",
+          "lids": "assets/rigs/shaman/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/shaman/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/shaman/gold/body.png",
+          "action": "assets/rigs/shaman/gold/action.png",
+          "fin": "assets/rigs/shaman/gold/fin.png",
+          "lids": "assets/rigs/shaman/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/shaman/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/shaman/moss/body.png",
+          "action": "assets/rigs/shaman/moss/action.png",
+          "fin": "assets/rigs/shaman/moss/fin.png",
+          "lids": "assets/rigs/shaman/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        210.0,
+        277.5
+      ],
+      "finPivot": [
+        310.5,
+        129.5
+      ],
+      "action": "totem-sway",
+      "angle": 0.065,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "warrior",
+    "name": "Воин",
+    "displayScale": 1.0,
+    "plannedAction": "shield-pump",
+    "eyes": [
+      [
+        180.5,
+        130.0,
+        10.5,
+        21.5
+      ],
+      [
+        265.5,
+        129.0,
+        26.0,
+        33.0
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/warrior/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/warrior/emerald/body.png",
+          "action": "assets/rigs/warrior/emerald/action.png",
+          "fin": "assets/rigs/warrior/emerald/fin.png",
+          "lids": "assets/rigs/warrior/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/warrior/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/warrior/lagoon/body.png",
+          "action": "assets/rigs/warrior/lagoon/action.png",
+          "fin": "assets/rigs/warrior/lagoon/fin.png",
+          "lids": "assets/rigs/warrior/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/warrior/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/warrior/ice/body.png",
+          "action": "assets/rigs/warrior/ice/action.png",
+          "fin": "assets/rigs/warrior/ice/fin.png",
+          "lids": "assets/rigs/warrior/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/warrior/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/warrior/sapphire/body.png",
+          "action": "assets/rigs/warrior/sapphire/action.png",
+          "fin": "assets/rigs/warrior/sapphire/fin.png",
+          "lids": "assets/rigs/warrior/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/warrior/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/warrior/amethyst/body.png",
+          "action": "assets/rigs/warrior/amethyst/action.png",
+          "fin": "assets/rigs/warrior/amethyst/fin.png",
+          "lids": "assets/rigs/warrior/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/warrior/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/warrior/orchid/body.png",
+          "action": "assets/rigs/warrior/orchid/action.png",
+          "fin": "assets/rigs/warrior/orchid/fin.png",
+          "lids": "assets/rigs/warrior/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/warrior/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/warrior/coral/body.png",
+          "action": "assets/rigs/warrior/coral/action.png",
+          "fin": "assets/rigs/warrior/coral/fin.png",
+          "lids": "assets/rigs/warrior/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/warrior/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/warrior/mandarin/body.png",
+          "action": "assets/rigs/warrior/mandarin/action.png",
+          "fin": "assets/rigs/warrior/mandarin/fin.png",
+          "lids": "assets/rigs/warrior/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/warrior/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/warrior/gold/body.png",
+          "action": "assets/rigs/warrior/gold/action.png",
+          "fin": "assets/rigs/warrior/gold/fin.png",
+          "lids": "assets/rigs/warrior/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/warrior/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/warrior/moss/body.png",
+          "action": "assets/rigs/warrior/moss/action.png",
+          "fin": "assets/rigs/warrior/moss/fin.png",
+          "lids": "assets/rigs/warrior/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        336.0,
+        232.5
+      ],
+      "finPivot": [
+        280.0,
+        92.5
+      ],
+      "action": "shield-pump",
+      "angle": -0.055,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "tidehunter",
+    "name": "Приливный охотник",
+    "displayScale": 1.03,
+    "plannedAction": "conch-call",
+    "eyes": [
+      [
+        199.5,
+        127.5,
+        11.5,
+        19.0
+      ],
+      [
+        269.5,
+        128.0,
+        20.5,
+        24.0
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/tidehunter/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/emerald/body.png",
+          "action": "assets/rigs/tidehunter/emerald/action.png",
+          "fin": "assets/rigs/tidehunter/emerald/fin.png",
+          "lids": "assets/rigs/tidehunter/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/tidehunter/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/lagoon/body.png",
+          "action": "assets/rigs/tidehunter/lagoon/action.png",
+          "fin": "assets/rigs/tidehunter/lagoon/fin.png",
+          "lids": "assets/rigs/tidehunter/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/tidehunter/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/ice/body.png",
+          "action": "assets/rigs/tidehunter/ice/action.png",
+          "fin": "assets/rigs/tidehunter/ice/fin.png",
+          "lids": "assets/rigs/tidehunter/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/tidehunter/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/sapphire/body.png",
+          "action": "assets/rigs/tidehunter/sapphire/action.png",
+          "fin": "assets/rigs/tidehunter/sapphire/fin.png",
+          "lids": "assets/rigs/tidehunter/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/tidehunter/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/amethyst/body.png",
+          "action": "assets/rigs/tidehunter/amethyst/action.png",
+          "fin": "assets/rigs/tidehunter/amethyst/fin.png",
+          "lids": "assets/rigs/tidehunter/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/tidehunter/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/orchid/body.png",
+          "action": "assets/rigs/tidehunter/orchid/action.png",
+          "fin": "assets/rigs/tidehunter/orchid/fin.png",
+          "lids": "assets/rigs/tidehunter/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/tidehunter/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/coral/body.png",
+          "action": "assets/rigs/tidehunter/coral/action.png",
+          "fin": "assets/rigs/tidehunter/coral/fin.png",
+          "lids": "assets/rigs/tidehunter/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/tidehunter/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/mandarin/body.png",
+          "action": "assets/rigs/tidehunter/mandarin/action.png",
+          "fin": "assets/rigs/tidehunter/mandarin/fin.png",
+          "lids": "assets/rigs/tidehunter/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/tidehunter/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/gold/body.png",
+          "action": "assets/rigs/tidehunter/gold/action.png",
+          "fin": "assets/rigs/tidehunter/gold/fin.png",
+          "lids": "assets/rigs/tidehunter/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/tidehunter/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/tidehunter/moss/body.png",
+          "action": "assets/rigs/tidehunter/moss/action.png",
+          "fin": "assets/rigs/tidehunter/moss/fin.png",
+          "lids": "assets/rigs/tidehunter/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        353.0,
+        234.5
+      ],
+      "finPivot": [
+        297.5,
+        99.5
+      ],
+      "action": "conch-call",
+      "angle": -0.055,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "oracle",
+    "name": "Оракул",
+    "displayScale": 0.94,
+    "plannedAction": "pearl-reveal",
+    "eyes": [
+      [
+        198.5,
+        142.0,
+        8.5,
+        16.0
+      ],
+      [
+        269.0,
+        143.5,
+        17.5,
+        20.0
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/oracle/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/oracle/emerald/body.png",
+          "action": "assets/rigs/oracle/emerald/action.png",
+          "fin": "assets/rigs/oracle/emerald/fin.png",
+          "lids": "assets/rigs/oracle/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/oracle/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/oracle/lagoon/body.png",
+          "action": "assets/rigs/oracle/lagoon/action.png",
+          "fin": "assets/rigs/oracle/lagoon/fin.png",
+          "lids": "assets/rigs/oracle/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/oracle/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/oracle/ice/body.png",
+          "action": "assets/rigs/oracle/ice/action.png",
+          "fin": "assets/rigs/oracle/ice/fin.png",
+          "lids": "assets/rigs/oracle/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/oracle/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/oracle/sapphire/body.png",
+          "action": "assets/rigs/oracle/sapphire/action.png",
+          "fin": "assets/rigs/oracle/sapphire/fin.png",
+          "lids": "assets/rigs/oracle/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/oracle/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/oracle/amethyst/body.png",
+          "action": "assets/rigs/oracle/amethyst/action.png",
+          "fin": "assets/rigs/oracle/amethyst/fin.png",
+          "lids": "assets/rigs/oracle/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/oracle/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/oracle/orchid/body.png",
+          "action": "assets/rigs/oracle/orchid/action.png",
+          "fin": "assets/rigs/oracle/orchid/fin.png",
+          "lids": "assets/rigs/oracle/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/oracle/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/oracle/coral/body.png",
+          "action": "assets/rigs/oracle/coral/action.png",
+          "fin": "assets/rigs/oracle/coral/fin.png",
+          "lids": "assets/rigs/oracle/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/oracle/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/oracle/mandarin/body.png",
+          "action": "assets/rigs/oracle/mandarin/action.png",
+          "fin": "assets/rigs/oracle/mandarin/fin.png",
+          "lids": "assets/rigs/oracle/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/oracle/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/oracle/gold/body.png",
+          "action": "assets/rigs/oracle/gold/action.png",
+          "fin": "assets/rigs/oracle/gold/fin.png",
+          "lids": "assets/rigs/oracle/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/oracle/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/oracle/moss/body.png",
+          "action": "assets/rigs/oracle/moss/action.png",
+          "fin": "assets/rigs/oracle/moss/fin.png",
+          "lids": "assets/rigs/oracle/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        251.0,
+        318.0
+      ],
+      "finPivot": [
+        283.5,
+        87.0
+      ],
+      "action": "pearl-reveal",
+      "angle": -0.025,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "baby",
+    "name": "Малыш",
+    "displayScale": 0.68,
+    "plannedAction": "toy-wave",
+    "eyes": [
+      [
+        158.0,
+        202.5,
+        10.5,
+        23.0
+      ],
+      [
+        258.5,
+        209.0,
+        23.0,
+        27.0
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/baby/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/baby/emerald/body.png",
+          "action": "assets/rigs/baby/emerald/action.png",
+          "fin": "assets/rigs/baby/emerald/fin.png",
+          "lids": "assets/rigs/baby/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/baby/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/baby/lagoon/body.png",
+          "action": "assets/rigs/baby/lagoon/action.png",
+          "fin": "assets/rigs/baby/lagoon/fin.png",
+          "lids": "assets/rigs/baby/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/baby/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/baby/ice/body.png",
+          "action": "assets/rigs/baby/ice/action.png",
+          "fin": "assets/rigs/baby/ice/fin.png",
+          "lids": "assets/rigs/baby/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/baby/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/baby/sapphire/body.png",
+          "action": "assets/rigs/baby/sapphire/action.png",
+          "fin": "assets/rigs/baby/sapphire/fin.png",
+          "lids": "assets/rigs/baby/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/baby/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/baby/amethyst/body.png",
+          "action": "assets/rigs/baby/amethyst/action.png",
+          "fin": "assets/rigs/baby/amethyst/fin.png",
+          "lids": "assets/rigs/baby/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/baby/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/baby/orchid/body.png",
+          "action": "assets/rigs/baby/orchid/action.png",
+          "fin": "assets/rigs/baby/orchid/fin.png",
+          "lids": "assets/rigs/baby/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/baby/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/baby/coral/body.png",
+          "action": "assets/rigs/baby/coral/action.png",
+          "fin": "assets/rigs/baby/coral/fin.png",
+          "lids": "assets/rigs/baby/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/baby/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/baby/mandarin/body.png",
+          "action": "assets/rigs/baby/mandarin/action.png",
+          "fin": "assets/rigs/baby/mandarin/fin.png",
+          "lids": "assets/rigs/baby/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/baby/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/baby/gold/body.png",
+          "action": "assets/rigs/baby/gold/action.png",
+          "fin": "assets/rigs/baby/gold/fin.png",
+          "lids": "assets/rigs/baby/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/baby/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/baby/moss/body.png",
+          "action": "assets/rigs/baby/moss/action.png",
+          "fin": "assets/rigs/baby/moss/fin.png",
+          "lids": "assets/rigs/baby/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        181.0,
+        281.5
+      ],
+      "finPivot": [
+        255.0,
+        164.5
+      ],
+      "action": "toy-wave",
+      "angle": 0.13,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "chef",
+    "name": "Повар",
+    "displayScale": 1.04,
+    "plannedAction": "spoon-stir",
+    "eyes": [
+      [
+        179.0,
+        142.0,
+        11.5,
+        21.0
+      ],
+      [
+        265.0,
+        141.0,
+        21.0,
+        24.5
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/chef/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/chef/emerald/body.png",
+          "action": "assets/rigs/chef/emerald/action.png",
+          "fin": "assets/rigs/chef/emerald/fin.png",
+          "lids": "assets/rigs/chef/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/chef/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/chef/lagoon/body.png",
+          "action": "assets/rigs/chef/lagoon/action.png",
+          "fin": "assets/rigs/chef/lagoon/fin.png",
+          "lids": "assets/rigs/chef/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/chef/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/chef/ice/body.png",
+          "action": "assets/rigs/chef/ice/action.png",
+          "fin": "assets/rigs/chef/ice/fin.png",
+          "lids": "assets/rigs/chef/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/chef/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/chef/sapphire/body.png",
+          "action": "assets/rigs/chef/sapphire/action.png",
+          "fin": "assets/rigs/chef/sapphire/fin.png",
+          "lids": "assets/rigs/chef/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/chef/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/chef/amethyst/body.png",
+          "action": "assets/rigs/chef/amethyst/action.png",
+          "fin": "assets/rigs/chef/amethyst/fin.png",
+          "lids": "assets/rigs/chef/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/chef/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/chef/orchid/body.png",
+          "action": "assets/rigs/chef/orchid/action.png",
+          "fin": "assets/rigs/chef/orchid/fin.png",
+          "lids": "assets/rigs/chef/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/chef/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/chef/coral/body.png",
+          "action": "assets/rigs/chef/coral/action.png",
+          "fin": "assets/rigs/chef/coral/fin.png",
+          "lids": "assets/rigs/chef/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/chef/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/chef/mandarin/body.png",
+          "action": "assets/rigs/chef/mandarin/action.png",
+          "fin": "assets/rigs/chef/mandarin/fin.png",
+          "lids": "assets/rigs/chef/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/chef/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/chef/gold/body.png",
+          "action": "assets/rigs/chef/gold/action.png",
+          "fin": "assets/rigs/chef/gold/fin.png",
+          "lids": "assets/rigs/chef/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/chef/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/chef/moss/body.png",
+          "action": "assets/rigs/chef/moss/action.png",
+          "fin": "assets/rigs/chef/moss/fin.png",
+          "lids": "assets/rigs/chef/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        181.5,
+        244.5
+      ],
+      "finPivot": [
+        263.5,
+        79.5
+      ],
+      "action": "spoon-stir",
+      "angle": 0.1,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "bard",
+    "name": "Бард",
+    "displayScale": 0.97,
+    "plannedAction": "lute-strum",
+    "eyes": [
+      [
+        171.5,
+        115.0,
+        11.5,
+        21.5
+      ],
+      [
+        250.0,
+        123.5,
+        20.0,
+        22.5
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/bard/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/bard/emerald/body.png",
+          "action": "assets/rigs/bard/emerald/action.png",
+          "fin": "assets/rigs/bard/emerald/fin.png",
+          "lids": "assets/rigs/bard/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/bard/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/bard/lagoon/body.png",
+          "action": "assets/rigs/bard/lagoon/action.png",
+          "fin": "assets/rigs/bard/lagoon/fin.png",
+          "lids": "assets/rigs/bard/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/bard/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/bard/ice/body.png",
+          "action": "assets/rigs/bard/ice/action.png",
+          "fin": "assets/rigs/bard/ice/fin.png",
+          "lids": "assets/rigs/bard/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/bard/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/bard/sapphire/body.png",
+          "action": "assets/rigs/bard/sapphire/action.png",
+          "fin": "assets/rigs/bard/sapphire/fin.png",
+          "lids": "assets/rigs/bard/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/bard/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/bard/amethyst/body.png",
+          "action": "assets/rigs/bard/amethyst/action.png",
+          "fin": "assets/rigs/bard/amethyst/fin.png",
+          "lids": "assets/rigs/bard/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/bard/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/bard/orchid/body.png",
+          "action": "assets/rigs/bard/orchid/action.png",
+          "fin": "assets/rigs/bard/orchid/fin.png",
+          "lids": "assets/rigs/bard/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/bard/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/bard/coral/body.png",
+          "action": "assets/rigs/bard/coral/action.png",
+          "fin": "assets/rigs/bard/coral/fin.png",
+          "lids": "assets/rigs/bard/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/bard/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/bard/mandarin/body.png",
+          "action": "assets/rigs/bard/mandarin/action.png",
+          "fin": "assets/rigs/bard/mandarin/fin.png",
+          "lids": "assets/rigs/bard/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/bard/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/bard/gold/body.png",
+          "action": "assets/rigs/bard/gold/action.png",
+          "fin": "assets/rigs/bard/gold/fin.png",
+          "lids": "assets/rigs/bard/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/bard/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/bard/moss/body.png",
+          "action": "assets/rigs/bard/moss/action.png",
+          "fin": "assets/rigs/bard/moss/fin.png",
+          "lids": "assets/rigs/bard/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        164.5,
+        230.5
+      ],
+      "finPivot": [
+        298.0,
+        79.5
+      ],
+      "action": "lute-strum",
+      "angle": 0.07,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "scout",
+    "name": "Разведчик",
+    "displayScale": 0.91,
+    "plannedAction": "look-around",
+    "eyes": [
+      [
+        190.0,
+        152.5,
+        9.0,
+        15.0
+      ],
+      [
+        272.5,
+        151.0,
+        19.0,
+        21.5
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/scout/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/scout/emerald/body.png",
+          "action": "assets/rigs/scout/emerald/action.png",
+          "fin": "assets/rigs/scout/emerald/fin.png",
+          "lids": "assets/rigs/scout/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/scout/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/scout/lagoon/body.png",
+          "action": "assets/rigs/scout/lagoon/action.png",
+          "fin": "assets/rigs/scout/lagoon/fin.png",
+          "lids": "assets/rigs/scout/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/scout/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/scout/ice/body.png",
+          "action": "assets/rigs/scout/ice/action.png",
+          "fin": "assets/rigs/scout/ice/fin.png",
+          "lids": "assets/rigs/scout/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/scout/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/scout/sapphire/body.png",
+          "action": "assets/rigs/scout/sapphire/action.png",
+          "fin": "assets/rigs/scout/sapphire/fin.png",
+          "lids": "assets/rigs/scout/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/scout/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/scout/amethyst/body.png",
+          "action": "assets/rigs/scout/amethyst/action.png",
+          "fin": "assets/rigs/scout/amethyst/fin.png",
+          "lids": "assets/rigs/scout/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/scout/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/scout/orchid/body.png",
+          "action": "assets/rigs/scout/orchid/action.png",
+          "fin": "assets/rigs/scout/orchid/fin.png",
+          "lids": "assets/rigs/scout/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/scout/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/scout/coral/body.png",
+          "action": "assets/rigs/scout/coral/action.png",
+          "fin": "assets/rigs/scout/coral/fin.png",
+          "lids": "assets/rigs/scout/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/scout/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/scout/mandarin/body.png",
+          "action": "assets/rigs/scout/mandarin/action.png",
+          "fin": "assets/rigs/scout/mandarin/fin.png",
+          "lids": "assets/rigs/scout/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/scout/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/scout/gold/body.png",
+          "action": "assets/rigs/scout/gold/action.png",
+          "fin": "assets/rigs/scout/gold/fin.png",
+          "lids": "assets/rigs/scout/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/scout/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/scout/moss/body.png",
+          "action": "assets/rigs/scout/moss/action.png",
+          "fin": "assets/rigs/scout/moss/fin.png",
+          "lids": "assets/rigs/scout/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        175.5,
+        210.0
+      ],
+      "finPivot": [
+        281.5,
+        94.5
+      ],
+      "action": "look-around",
+      "angle": 0.045,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  },
+  {
+    "id": "king",
+    "name": "Болотный король",
+    "displayScale": 1.08,
+    "plannedAction": "scepter-salute",
+    "eyes": [
+      [
+        201.0,
+        121.0,
+        11.5,
+        19.0
+      ],
+      [
+        283.0,
+        124.5,
+        21.5,
+        23.0
+      ]
+    ],
+    "variants": [
+      {
+        "color": "emerald",
+        "path": "assets/murlocs/king/01-emerald.png",
+        "layers": {
+          "body": "assets/rigs/king/emerald/body.png",
+          "action": "assets/rigs/king/emerald/action.png",
+          "fin": "assets/rigs/king/emerald/fin.png",
+          "lids": "assets/rigs/king/emerald/lids.png"
+        }
+      },
+      {
+        "color": "lagoon",
+        "path": "assets/murlocs/king/02-lagoon.png",
+        "layers": {
+          "body": "assets/rigs/king/lagoon/body.png",
+          "action": "assets/rigs/king/lagoon/action.png",
+          "fin": "assets/rigs/king/lagoon/fin.png",
+          "lids": "assets/rigs/king/lagoon/lids.png"
+        }
+      },
+      {
+        "color": "ice",
+        "path": "assets/murlocs/king/03-ice.png",
+        "layers": {
+          "body": "assets/rigs/king/ice/body.png",
+          "action": "assets/rigs/king/ice/action.png",
+          "fin": "assets/rigs/king/ice/fin.png",
+          "lids": "assets/rigs/king/ice/lids.png"
+        }
+      },
+      {
+        "color": "sapphire",
+        "path": "assets/murlocs/king/04-sapphire.png",
+        "layers": {
+          "body": "assets/rigs/king/sapphire/body.png",
+          "action": "assets/rigs/king/sapphire/action.png",
+          "fin": "assets/rigs/king/sapphire/fin.png",
+          "lids": "assets/rigs/king/sapphire/lids.png"
+        }
+      },
+      {
+        "color": "amethyst",
+        "path": "assets/murlocs/king/05-amethyst.png",
+        "layers": {
+          "body": "assets/rigs/king/amethyst/body.png",
+          "action": "assets/rigs/king/amethyst/action.png",
+          "fin": "assets/rigs/king/amethyst/fin.png",
+          "lids": "assets/rigs/king/amethyst/lids.png"
+        }
+      },
+      {
+        "color": "orchid",
+        "path": "assets/murlocs/king/06-orchid.png",
+        "layers": {
+          "body": "assets/rigs/king/orchid/body.png",
+          "action": "assets/rigs/king/orchid/action.png",
+          "fin": "assets/rigs/king/orchid/fin.png",
+          "lids": "assets/rigs/king/orchid/lids.png"
+        }
+      },
+      {
+        "color": "coral",
+        "path": "assets/murlocs/king/07-coral.png",
+        "layers": {
+          "body": "assets/rigs/king/coral/body.png",
+          "action": "assets/rigs/king/coral/action.png",
+          "fin": "assets/rigs/king/coral/fin.png",
+          "lids": "assets/rigs/king/coral/lids.png"
+        }
+      },
+      {
+        "color": "mandarin",
+        "path": "assets/murlocs/king/08-mandarin.png",
+        "layers": {
+          "body": "assets/rigs/king/mandarin/body.png",
+          "action": "assets/rigs/king/mandarin/action.png",
+          "fin": "assets/rigs/king/mandarin/fin.png",
+          "lids": "assets/rigs/king/mandarin/lids.png"
+        }
+      },
+      {
+        "color": "gold",
+        "path": "assets/murlocs/king/09-gold.png",
+        "layers": {
+          "body": "assets/rigs/king/gold/body.png",
+          "action": "assets/rigs/king/gold/action.png",
+          "fin": "assets/rigs/king/gold/fin.png",
+          "lids": "assets/rigs/king/gold/lids.png"
+        }
+      },
+      {
+        "color": "moss",
+        "path": "assets/murlocs/king/10-moss.png",
+        "layers": {
+          "body": "assets/rigs/king/moss/body.png",
+          "action": "assets/rigs/king/moss/action.png",
+          "fin": "assets/rigs/king/moss/fin.png",
+          "lids": "assets/rigs/king/moss/lids.png"
+        }
+      }
+    ],
+    "rig": {
+      "pivot": [
+        197.0,
+        236.0
+      ],
+      "finPivot": [
+        278.5,
+        67.0
+      ],
+      "action": "scepter-salute",
+      "angle": -0.085,
+      "breathY": 280,
+      "breathRadius": 118,
+      "anchor": [
+        256,
+        492
+      ]
+    }
+  }
+]

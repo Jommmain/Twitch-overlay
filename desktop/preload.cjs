@@ -1,0 +1,3 @@
+const {contextBridge,ipcRenderer}=require('electron');
+const invoke=async(name,arg)=>{const r=await ipcRenderer.invoke('swamp:'+name,arg);if(!r.ok)throw Error(r.error);return r.value;};
+contextBridge.exposeInMainWorld('swampDesktop',Object.freeze({load:()=>invoke('load'),save:v=>invoke('save',v),check:v=>invoke('check',v),copyUrl:()=>invoke('copy-url'),testRun:()=>invoke('test-run'),preview:()=>invoke('preview'),docs:key=>invoke('docs',key),status:()=>invoke('status'),openLog:()=>invoke('open-log'),restartServer:()=>invoke('restart-server'),checkUpdates:()=>invoke('check-updates'),downloadUpdate:()=>invoke('download-update'),installUpdate:()=>invoke('install-update'),openUpdate:()=>invoke('open-update'),copyReport:()=>invoke('copy-report')}));
