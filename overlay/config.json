@@ -3,7 +3,7 @@
     "width": 1920,
     "height": 1080,
     "stripHeight": 250,
-    "stripOpacity": 1,
+    "stripOpacity": 0.82,
     "murlocSize": 148,
     "minMurlocs": 10,
     "maxMurlocs": 40,
@@ -61,7 +61,7 @@
     "persistMilestones": true,
     "storageKey": "swamp-overlay-v1"
   },
-  "artVersion": "1.2.1",
+  "artVersion": "1.2.2",
   "nicknames": {
     "enabled": true,
     "maxOnScreen": 20,
