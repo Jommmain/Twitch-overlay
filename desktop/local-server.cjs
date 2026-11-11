@@ -1,7 +1,7 @@
 // Imported directly by Electron MAIN. No utilityProcess, subprocess, ESM entry or cwd dependency.
 const http=require('node:http'),fs=require('node:fs/promises'),path=require('node:path'),{randomUUID}=require('node:crypto');
 const NUMBERS=['viewers','runIndex','queued','murlocs','maxStep','uptimeStep','uptimeSeconds','nextUptimeSeconds','nextViewerThreshold','frameMs','chatters','chatPending'];
-async function startLocalServer({root,config,credentials={},preferredPort=8766,portCount=20,logger,onError=()=>{},fetcher=fetch,WebSocketImpl=globalThis.WebSocket,version='1.2.1'}){
+async function startLocalServer({root,config,credentials={},preferredPort=8766,portCount=20,logger,onError=()=>{},fetcher=fetch,WebSocketImpl=globalThis.WebSocket,version='1.2.2'}){
  const ROOT=await fs.realpath(root);for(const name of ['index.html','app.js','engine.js','style.css','assets/characters.json','assets/swamp-strip.png','chat-avatars.js','irc-client.cjs'])await fs.access(path.join(ROOT,name));
  const instanceId=randomUUID(),clients=new Map(),presenceClients=new Set(),sockets=new Set(),apiHistory=[],counts={requests:0,testRuns:0,telemetry:0};let server,stopping=false,cache=null,cacheAt=0,pending=null,currentPort=null,chat=null;
  const noteApi=(endpoint,status)=>{const item={at:Date.now(),endpoint:['/helix/users','/helix/streams'].includes(endpoint)?endpoint:'/helix/other',status:Number(status)||0};apiHistory.push(item);if(apiHistory.length>30)apiHistory.shift();logger?.debug('twitch.http',item);};

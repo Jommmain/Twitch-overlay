@@ -38,6 +38,8 @@ function newActor(index,user=null){
 function adjustPopulation(){
   if(roster?.entries.size)return;
   actors=actors.filter(a=>!a.userKey);
+  // Viewer count cannot name lurkers. Only the explicit demo may invent a crowd.
+  if(!demo){actors.length=0;return;}
   const desired=clamp(Math.ceil(engine.viewers/config.scene.viewersPerMurloc),Math.min(config.scene.minMurlocs,roster?.max||50),Math.min(config.scene.maxMurlocs,roster?.max||50));
   while(actors.length<desired){const a=newActor(actors.length);a.x=rand(90,1830);actors.push(a);}
   if(actors.length>desired)actors.splice(desired);
@@ -56,7 +58,9 @@ function receivePresence(p){
  if(p.kind==='chat-snapshot'){for(const u of (p.users||[]).slice(-roster.max))roster.message(u,currentClock());syncChatterActors();return;}
  if(p.kind==='disconnect'){engine.disconnect(currentClock());return;}
  if(p.kind!=='presence')return;engine.presence(p.login,p.action,currentClock());
- if(p.action==='message'&&config.nicknames.enabled){roster.message(p,currentClock());syncChatterActors();}
+ if(!config.nicknames.enabled)return;
+ if(p.action==='part'){roster.part(p,currentClock());syncChatterActors();return;}
+ if(p.action==='message'||(p.action==='join'&&!p.self)){roster.message(p,currentClock());syncChatterActors();}
 }
 const fakeNames=['SwampFisher','Jommmain','MrrglMaster','ЛеснойШаман','LunaFox','KappaKnight','ЧайныйМурлок','TinyOracle','NetRunner','MushroomMage','БардБолота','FrostFin','MoonPearl','ChefMrrgl','QuietScout','GoldenCrown','РечнойОхотник','SapphireWave','MossKeeper','Firefly'];
 function fakeChatter(i,text){return {kind:'presence',action:'message',login:'demo_chatter_'+i,userId:String(900000001+i),displayName:fakeNames[i%fakeNames.length]+(i>=fakeNames.length?i:''),...(text?{speechText:text}:{})};}
@@ -212,7 +216,7 @@ function draw(){
   const depth=[...actors.map(a=>({y:a.y,draw:()=>drawActor(a)})),...troops.map(s=>({y:s.y,draw:()=>drawTroop(s)}))].sort((a,b)=>a.y-b.y);
   depth.forEach(x=>x.draw());drawFog(fogFront,-5,.72,4);layoutLabels();drawChatBubbles();drawNicknames();
   for(const p of particles.filter(p=>p.kind==='splash')){ctx.globalAlpha=clamp(p.life/p.max*.8,0,.8);ctx.fillStyle='#8cdbd5';ctx.beginPath();ctx.ellipse(p.x,p.y,p.size*.6,p.size,0,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;ctx.restore();
-  if(gallery){ctx.save();ctx.fillStyle='#b2c9bc';ctx.font='26px system-ui';ctx.fillText('SWAMP MURLOCS 1.2.1 · ДЫХАНИЕ / МОРГАНИЕ / ДЕЙСТВИЯ',50,54);ctx.restore();}
+  if(gallery){ctx.save();ctx.fillStyle='#b2c9bc';ctx.font='26px system-ui';ctx.fillText('SWAMP MURLOCS 1.2.2 · ДЫХАНИЕ / МОРГАНИЕ / ДЕЙСТВИЯ',50,54);ctx.restore();}
   if(config.desktopDebug&&config.desktopDebugHud){const period=config.triggers.uptimeMinutes*60,remaining=Math.ceil(period-Math.max(0,currentClock()-streamOrigin)%period);ctx.save();ctx.fillStyle='rgba(8,20,27,.86)';ctx.fillRect(12,12,460,86);ctx.fillStyle='#9ce0d7';ctx.font='14px monospace';ctx.fillText('DEBUG · HTTP '+(controlConnected?'connected':'disconnected')+' · '+(engine.live?'online':'offline'),24,34);ctx.fillText('viewers '+engine.viewers+' · next '+((engine.maxStep+1)*config.triggers.viewerStep)+' · timer '+remaining+'s',24,57);ctx.fillText('runs '+runIndex+' · queue '+queue.pending.length+' · ники '+roster.entries.size+' · SSE '+(controlConnected?'OK':'retry'),24,80);ctx.restore();}
   if(demo&&!params.has('hideHud')){ $('status').textContent=sourceStatus;$('viewers').textContent=`Зрителей: ${engine.viewers}`;$('uptime').textContent=`Эфир: ${Math.floor((logicalNow-streamOrigin)/60)} мин`;$('crowd').textContent=`Мурлоков: ${actors.length} · очередь: ${queue.pending.length}`;$('event-log').textContent=eventLog;}
 }
@@ -282,7 +286,7 @@ async function main(){
   if(demo&&params.get('chatters')==='1')spawnFakeChatters(numeric('names',12,1,50));
   document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>action(b.dataset.action));
   addEventListener('keydown',e=>{if(!demo||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)||e.repeat)return;const keys={e:'run',l:'ltr',r:'rtl',v:'viewers',t:'uptime',w:'watch',h:'hop',m:'speech',s:'splash',b:'background',p:'pause',n:'chatters',q:'chat-message',c:'clear-chatters'};const a=keys[e.key.toLowerCase()];if(a){e.preventDefault();action(a);}});
-  window.SwampOverlay={ready:true,action,stats:()=>({ready,artVersion:"1.2.1",chatters:roster.entries.size,chatPending:roster.pending.size,chatStatus,labels:lastLabels.map(({nickname,x,y,w,h})=>({nickname,x,y,w,h})),bubbleCount:lastBubbles.length,riggedTypes:characters.length,runFrames:soldierImages.length,fog:config.animation.fog,sim,viewers:engine.viewers,murlocs:actors.length,troops:troops.length,particles:particles.length,runIndex,lastDirection:lastRunDirection,eventLog,queued:queue.pending.length,events:queue.history,stream:engine.snapshot(),frameMs,live:engine.live,sourceStatus}),captureStream:(fps=30)=>canvas.captureStream(fps)};
+  window.SwampOverlay={ready:true,action,stats:()=>({ready,artVersion:"1.2.2",chatters:roster.entries.size,chatPending:roster.pending.size,chatStatus,labels:lastLabels.map(({nickname,x,y,w,h})=>({nickname,x,y,w,h})),bubbleCount:lastBubbles.length,riggedTypes:characters.length,runFrames:soldierImages.length,fog:config.animation.fog,sim,viewers:engine.viewers,murlocs:actors.length,troops:troops.length,particles:particles.length,runIndex,lastDirection:lastRunDirection,eventLog,queued:queue.pending.length,events:queue.history,stream:engine.snapshot(),frameMs,live:engine.live,sourceStatus}),captureStream:(fps=30)=>canvas.captureStream(fps)};
   if(testing)Object.assign(window.SwampOverlay,{testChatMessage:p=>receivePresence({kind:'presence',action:'message',...p}),testChatters:()=>roster.snapshot(currentClock()).map(({key,userId,nickname,alpha,slot,lastSeen,leavingAt,bubbleText,bubbleQueueLength})=>({key,userId,nickname,alpha,slot,lastSeen,leavingAt,bubbleText,bubbleQueueLength})),testChatClear:()=>roster.clear(currentClock()),testActionAll:()=>actors.forEach(a=>{a.actionStart=sim;a.actionDuration=2.5;a.nextAction=sim+1000;}),testBlinkAll:()=>actors.forEach(a=>{a.blink=sim+.13;}),testActors:()=>actors.map(a=>({id:a.type.id,action:a.type.rig.action,actionStart:a.actionStart,blink:a.blink})),testSetStream:info=>setStream(info),testPresence:(login,act,now=logicalNow)=>engine.presence(login,act,now),testAdvance:s=>{clockOffset+=s;logicalNow+=s;engine.tick(logicalNow);},testTick:dt=>{update(dt);draw();},testPause:()=>{paused=true;},testScene:()=>({troops:troops.map(({x,y,direction})=>({x,y,direction,mirrorX:direction<0})),actors:actors.map(({x,target,panicUntil})=>({x,target,panicking:panicUntil>sim})),dust:particles.filter(p=>p.kind==='dust').map(({x,vx,direction})=>({x,vx,direction}))}),engine,queue});
   if(config.desktopControl)connectControl();
   ready=true;draw();requestAnimationFrame(frame);

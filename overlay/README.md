@@ -1,4 +1,4 @@
-# Standalone overlay 1.2.1
+# Standalone overlay 1.2.2
 
 Основная документация: `../README-ru.md`. Запуск: `node server.mjs`, затем http://127.0.0.1:8766/ (или PORT). Для теста `?demo=1&preview=1`, N — ники, Q — сообщение, C — убрать.
 

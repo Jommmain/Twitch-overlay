@@ -1,6 +1,6 @@
 {
   "name": "swamp-murlocs-desktop",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Локальный Twitch-оверлей с мурлоками для OBS",
   "author": "Twitch Visuals",
   "private": true,
